@@ -263,7 +263,7 @@ class ExtendSensor(SensorBase):
             self._energy = util.convert(new_state.state, float)
             self._energy_row = self._energy
         if self.enabled:
-            self.async_schedule_update_ha_state(True)
+            self.schedule_update_ha_state()
 
 
     def unique_id(self):
